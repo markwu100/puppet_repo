@@ -1,7 +1,6 @@
-node default {
-  file { '/root/README':
-    ensure => file,
-    content => 'This is a readme',
-    owner   => 'root',
-  }
+node puppet.local {
+  include role::master
+}
+node elk.local {
+  include role::elk
 }
